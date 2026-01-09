@@ -2,8 +2,8 @@ use super::Solution;
 
 //IMPORTANT!! Submit Code Region Begin(Do not remove this line)
 
-use std::collections::{BinaryHeap, HashMap};
 use std::cmp::Reverse;
+use std::collections::{BinaryHeap, HashMap};
 
 impl Solution {
     pub fn top_k_frequent(nums: Vec<i32>, k: i32) -> Vec<i32> {

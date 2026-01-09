@@ -6,21 +6,21 @@ use std::collections::HashMap;
 impl Solution {
     // Top-down; Time Complexity: O(n); Space Complexity: O(n)
     pub fn climb_stairs(n: i32) -> i32 {
-    fn dp(i: i32, memo: &mut HashMap<i32, i32>) -> i32 {
-        if i <= 1 {
-            return 1;
+        fn dp(i: i32, memo: &mut HashMap<i32, i32>) -> i32 {
+            if i <= 1 {
+                return 1;
+            }
+            if let Some(&v) = memo.get(&i) {
+                return v;
+            }
+            let result = dp(i - 1, memo) + dp(i - 2, memo);
+            memo.insert(i, result);
+            result
         }
-        if let Some(&v) = memo.get(&i) {
-            return v;
-        }
-        let result = dp(i - 1, memo) + dp(i - 2, memo);
-        memo.insert(i, result);
-        result
-    }
 
-    let mut memo: HashMap<i32, i32> = HashMap::new();
-    dp(n, &mut memo)
-}
+        let mut memo: HashMap<i32, i32> = HashMap::new();
+        dp(n, &mut memo)
+    }
 
     // // Bottom-up; Time Complexity: O(n); Space Complexity: O(1)
     // if n < 2 { return 1}
