@@ -1,9 +1,12 @@
+use super::Solution;
 
 //IMPORTANT!! Submit Code Region Begin(Do not remove this line)
 impl Solution {
     pub fn is_anagram(s: String, t: String) -> bool {
         use std::collections::HashMap;
-        if s.len() != t.len() { return false;}
+        if s.len() != t.len() {
+            return false;
+        }
 
         let mut count: HashMap<char, i32> = HashMap::new();
         for c in s.chars() {
@@ -12,7 +15,9 @@ impl Solution {
         for c in t.chars() {
             let e = count.entry(c).or_insert(0);
             *e -= 1;
-            if *e < 0 { return false;}
+            if *e < 0 {
+                return false;
+            }
         }
 
         true

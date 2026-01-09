@@ -1,4 +1,4 @@
-
+use super::Solution;
 
 //IMPORTANT!! Submit Code Region Begin(Do not remove this line)
 impl Solution {

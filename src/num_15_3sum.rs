@@ -1,13 +1,13 @@
+use super::Solution;
 
 //IMPORTANT!! Submit Code Region Begin(Do not remove this line)
 impl Solution {
     pub fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {
-        let mut results:Vec<Vec<i32>> = vec![];
+        let mut results: Vec<Vec<i32>> = vec![];
         let mut nums = nums;
         nums.sort();
 
         for i in 0..nums.len() - 2 {
-
             if i > 0 && nums[i] == nums[i - 1] {
                 continue;
             }
@@ -33,7 +33,6 @@ impl Solution {
                     r -= 1;
                 }
             }
-
         }
 
         results
