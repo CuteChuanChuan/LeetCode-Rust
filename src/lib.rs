@@ -3,6 +3,9 @@ pub struct Solution;
 #[path = "num_1_TwoSum.rs"]
 mod two_sum;
 
+#[path = "num_11_ContainerWithMostWater.rs"]
+mod container_with_most_water;
+
 #[path = "num_15_3sum.rs"]
 mod three_sum;
 
