@@ -2,7 +2,7 @@ use super::Solution;
 
 //IMPORTANT!! Submit Code Region Begin(Do not remove this line)
 impl Solution {
-    pub fn two_sum(numbers: Vec<i32>, target: i32) -> Vec<i32> {
+    pub fn two_sum_1(numbers: Vec<i32>, target: i32) -> Vec<i32> {
         let (mut l, mut r) = (0, numbers.len().saturating_sub(1));
 
         while l < r {
